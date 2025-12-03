@@ -20,6 +20,25 @@
 (use-package doom-themes)
 (load-theme 'doom-material-dark t)
 
+;; --- Vertico (UI for commands & completion) ---
+(use-package vertico
+  :init
+  (vertico-mode))
+
+;; --- Orderless (fuzzy matching) ---
+(use-package orderless
+  :custom
+  ;; Use orderless everywhere
+  (completion-styles '(orderless basic))
+  ;; Needed so file paths still complete normally
+  (completion-category-overrides
+   '((file (styles basic partial-completion)))))
+
+;; --- Marginalia (annotations: file size, mode, etc.) ---
+(use-package marginalia
+  :init
+  (marginalia-mode))
+
 
 ;; ────────────────────────────────────────────────────────────────────────────────
 ;; Core Settings
@@ -63,3 +82,15 @@
 ;; Some Performance settings via ChatGPT
 (setq gc-cons-threshold (* 50 1000 1000))
 (add-hook 'emacs-startup-hook (lambda () (setq gc-cons-threshold (* 2 1000 1000))))
+(custom-set-variables
+ ;; custom-set-variables was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(package-selected-packages '(doom-themes marginalia orderless vertico)))
+(custom-set-faces
+ ;; custom-set-faces was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ )
