@@ -42,6 +42,10 @@
 (setq scroll-step 1)
 
 ;; Handle temporary files
-(setq auto-save-default nil)
-(setq make-backup-files nil)
-(setq create-lockfiles  nil)
+(setq auto-save-default nil)  ;; Disable auto-saving
+(setq make-backup-files nil)  ;; Disable backup~ files
+(setq create-lockfiles  nil)  ;; Disable .#lock files
+
+;; Some Performance settings via ChatGPT
+(setq gc-cons-threshold (* 50 1000 1000))
+(add-hook 'emacs-startup-hook (lambda () (setq gc-cons-threshold (* 2 1000 1000))))
