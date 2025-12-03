@@ -56,3 +56,12 @@ fi
 if [ -d "$PWD/mpv" ]; then
     link_dir "$PWD/mpv" "$HOME/.config/mpv"
 fi
+
+### scripts
+# dotfiles/scripts -> ~/.config/scripts
+if [ -d "$PWD/scripts" ]; then
+    link_dir "$PWD/scripts" "$HOME/.config/scripts"
+
+    chmod +x "$PWD"/scripts/*.sh 2>/dev/null || true
+    chmod +x "$HOME"/.config/scripts/*.sh 2>/dev/null || true
+fi
