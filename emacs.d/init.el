@@ -43,6 +43,13 @@
                             (?\" . ?\")   ; double quotes
                             (?\' . ?\'))) ; single quotes
 
+;; Only pair () and "" in lisp buffer
+(add-hook 'emacs-lisp-mode-hook
+	  (lambda ()
+	    (setq-local electric-pair-pairs '((?\( . ?\))
+					      (?\" . ?\")))))
+(electric-pair-mode 1)
+
 ;; Never let point get closer than 10 lines to top/bottom of window
 (setq scroll-margin 10)
 (setq scroll-conservatively 101)
