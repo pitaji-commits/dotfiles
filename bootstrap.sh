@@ -45,6 +45,12 @@ if [ -d "$PWD/i3status" ]; then
     link_dir "$PWD/i3status" "$HOME/.config/i3status"
 fi
 
+### Tmux
+# dotfiles/tmux -> ~/.config/tmux
+if [ -f "$PWD/tmux/tmux.conf" ]; then
+    ln -sf "$PWD/tmux/tmux.conf" "$HOME/.tmux.conf"
+fi
+
 ### mpv
 # dotfiles/mpv -> ~/.config/mpv
 if [ -d "$PWD/mpv" ]; then
