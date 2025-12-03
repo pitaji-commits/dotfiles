@@ -27,6 +27,12 @@ if [ -d "$PWD/alacritty" ]; then
 	link_dir "$PWD/alacritty" "$HOME/.config/alacritty"
 fi
 
+### emacs
+# dotfiles/emacs.d -> ~/.emacs.d
+if [ -d "$PWD/emacs.d" ]; then
+	link_dir "$PWD/emacs.d" "$HOME/.emacs.d"
+fi
+
 ### neovim
 # dotfiles/nvim -> ~/.config/nvim
 if [ -d "$PWD/nvim" ]; then
