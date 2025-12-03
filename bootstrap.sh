@@ -26,3 +26,9 @@ fi
 if [ -d "$PWD/alacritty" ]; then
 	link_dir "$PWD/alacritty" "$HOME/.config/alacritty"
 fi
+
+### neovim
+# dotfiles/nvim -> ~/.config/nvim
+if [ -d "$PWD/nvim" ]; then
+	link_dir "$PWD/nvim" "$HOME/.config/nvim"
+fi
