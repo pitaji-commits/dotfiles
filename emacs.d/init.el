@@ -40,3 +40,8 @@
 (setq scroll-margin 10)
 (setq scroll-conservatively 101)
 (setq scroll-step 1)
+
+;; Handle temporary files
+(setq auto-save-default nil)
+(setq make-backup-files nil)
+(setq create-lockfiles  nil)
