@@ -8,3 +8,9 @@ set -e
 if [ -f "$PWD/bash/bashrc" ]; then
 	ln -sf "$PWD/bash/bashrc" "$HOME/.bashrc"
 fi
+
+### alacritty
+# dotfiles/alacritty -> ~/.config/alacritty
+if [ -d "$PWD/alacritty" ]; then
+	link_dir "$PWD/alacritty" "$HOME/.config/alacritty"
+fi
