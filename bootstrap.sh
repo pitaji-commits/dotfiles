@@ -32,3 +32,9 @@ fi
 if [ -d "$PWD/nvim" ]; then
 	link_dir "$PWD/nvim" "$HOME/.config/nvim"
 fi
+
+### mpv
+# dotfiles/mpv -> ~/.config/mpv
+if [ -d "$PWD/mpv" ]; then
+    link_dir "$PWD/mpv" "$HOME/.config/mpv"
+fi
