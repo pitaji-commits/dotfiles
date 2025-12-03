@@ -33,6 +33,12 @@ if [ -d "$PWD/nvim" ]; then
 	link_dir "$PWD/nvim" "$HOME/.config/nvim"
 fi
 
+### i3
+# dotfiles/i3 -> ~/.config/i3
+if [ -d "$PWD/i3" ]; then
+    link_dir "$PWD/i3" "$HOME/.config/i3"
+fi
+
 ### mpv
 # dotfiles/mpv -> ~/.config/mpv
 if [ -d "$PWD/mpv" ]; then
