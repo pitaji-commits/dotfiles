@@ -36,6 +36,13 @@
 (global-display-line-numbers-mode t)
 (setq display-line-numbers-type 'relative)
 
+;; electric pair
+(setq electric-pair-pairs '((?\( . ?\))   ; parentheses
+                            (?\[ . ?\])   ; square brackets
+                            (?\{ . ?\})   ; curly braces
+                            (?\" . ?\")   ; double quotes
+                            (?\' . ?\'))) ; single quotes
+
 ;; Never let point get closer than 10 lines to top/bottom of window
 (setq scroll-margin 10)
 (setq scroll-conservatively 101)
