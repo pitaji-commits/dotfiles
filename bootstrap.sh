@@ -39,6 +39,12 @@ if [ -d "$PWD/i3" ]; then
     link_dir "$PWD/i3" "$HOME/.config/i3"
 fi
 
+### i3status
+# dotfiles/i3status -> ~/.config/i3
+if [ -d "$PWD/i3status" ]; then
+    link_dir "$PWD/i3status" "$HOME/.config/i3status"
+fi
+
 ### mpv
 # dotfiles/mpv -> ~/.config/mpv
 if [ -d "$PWD/mpv" ]; then
