@@ -65,3 +65,5 @@ if [ -d "$PWD/scripts" ]; then
     chmod +x "$PWD"/scripts/*.sh 2>/dev/null || true
     chmod +x "$HOME"/.config/scripts/*.sh 2>/dev/null || true
 fi
+
+echo "All done!"
